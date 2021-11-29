@@ -60,6 +60,8 @@ const reducer = (state, action) => {
   if (action.type === 'DISPLAY_ITEM') {
     return { ...state, cart: action.payload, loading: false };
   }
+
+  throw new Error('no matching action type');
 };
 
 export default reducer;
